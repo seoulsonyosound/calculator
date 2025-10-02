@@ -18,8 +18,16 @@ export default function App() {
   const [operand, setOperand] = useState("");
   const [operator, setOperator] = useState("");
   const [firstOperand, setFirstOperand] = useState("");
+  const [isResult, setIsResult] = useState(false);
 
   const handleNumberClick = (label) => {
+    if (isResult) {
+      setOperand(label);
+      setDisplay(label);
+      setIsResult(false);
+      return;
+    }
+
     let newOperand = operand;
     if (operand === "" && label === "0") {
       newOperand = "0";
@@ -38,6 +46,7 @@ export default function App() {
       setOperator(op);
       setOperand("");
       setDisplay(op);
+      setIsResult(false);
     }
   };
 
@@ -46,6 +55,7 @@ export default function App() {
     setOperator("");
     setFirstOperand("");
     setDisplay("0");
+    setIsResult(false);
   };
 
   const handleEqualsClick = () => {
@@ -63,6 +73,7 @@ export default function App() {
           setOperand("");
           setOperator("");
           setFirstOperand("");
+          setIsResult(false);
           return;
         }
         result = a / b;
@@ -72,11 +83,13 @@ export default function App() {
       setOperand(result.toString());
       setOperator("");
       setFirstOperand("");
+      setIsResult(true);
     }
   };
 
   const handleAlejosClick = () => {
     setDisplay("Theeanna Jether Alejos");
+    setIsResult(true);
   };
 
   return (
