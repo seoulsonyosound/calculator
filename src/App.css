@@ -1,0 +1,86 @@
+body {
+  background: #f0f2f5;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.header {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.calculator {
+  background: url("./assets/snoopy.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 350px;
+}
+
+.display {
+  background: #66CCFF;
+  color: #000;
+  font-size: 1.3em;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+button {
+  font-size: 1.1em;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #000;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.operator {
+  background: #FFFF00;
+  color: #000;
+}
+
+.equal {
+  background: #00b4cf;
+  color: #000;
+}
+
+.clear {
+  background: #fe0000;
+  color: #fff;
+}
+
+.surname {
+  background: #008d00;
+  color: #000000;
+  font-weight: bold;
+  width: 100%;
+  padding: 18px;
+  font-size: 1.2em;
+  border-radius: 8px;
+}
